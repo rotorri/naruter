@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+#links button, #links a {
+    display: inline-block;
+    max-width: 45vw;
+    padding: 0;
+    background-color: var(--clear);
+    margin: var(--banner-gap) auto;
+}
+
+#links a:hover {
+    filter: contrast(30%) brightness(150%);
+}
+
+#links .banner-module.self {
+    display: grid;
+    gap: var(--box-gap);
+    grid-template-columns: 1fr 2fr;
+}
+
+#links .banner-module.self .banner-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#links .banner-module.self img {
+    width: auto;
+}
+
+#links .banner-module.self button {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--point-color);
+    margin: var(--banner-gap) auto;
+    padding: 10px 20px;
+}
+
+#links .banner-module.self button:hover {
+    background-color: var(--point-sub-color);
+}
+
+#links .banner-module.group .banner-title {
+    margin: 0;
+}
+
+@media screen and (max-width: 639px) {
+	#links .banner-module.self {
+        grid-template-columns: auto;
+    }
+}

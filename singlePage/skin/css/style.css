@@ -1,0 +1,530 @@
+@charset "utf-8";
+
+/* 웹폰트는 이 위치에 넣어서 불러옵니다. */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+/* 웹폰트는 이 위치에 넣어서 불러옵니다. */
+
+:root {
+    /* -------- -------- -------- -------- 전체 색상 설정 -------- -------- -------- -------- */
+        --main-color: #fff;
+        --sub-color: #c3eeff;
+        /* 전반적인 색상을 지정합니다. */
+        --point-color: #639bff;
+        --point-sub-color: #3838ff;
+        /* 주요 포인트 색상을 지정합니다. */
+        --good-color: #47c88b;
+        /* 긍정 강조 색상을 지정합니다. */
+        --bad-color: #ff6351;
+        /* 부정 강조 색상을 지정합니다. */
+        --disable-color: #bbb;
+        /* 비활성 강조 색상을 지정합니다. */
+        --shadow-color: rgba(0,0,0,.5);
+        /* 그림자 기본 색상을 지정합니다. 그림자를 사용하지 않으려면 값을 rgba(0,0,0,0)으로 변경하세요. */
+        --scroll-color1: #ffed89;
+        --scroll-color2: #c3eeff;
+        /* 스크롤바의 커스텀 색상을 지정합니다. */
+        --select: #ffed89;
+        --select-color: #000080;
+        /* 드래그 색상 및 드래그 한 문구 색상을 지정합니다. */
+
+
+    /* -------- -------- -------- -------- 배경 이미지 설정 -------- -------- -------- -------- */
+        --bg-img: url('');
+        /* 홈페이지 전체 배경이미지를 넣습니다. 따옴표 안에 이미지 주소를 넣어주세요. 패턴과 main 색상보다 우선적으로 깔리게 됩니다.*/
+        --bg-pattern: url('');
+        /* 홈페이지 전체 배경화면에 패턴 배경을 넣습니다. 따옴표 안에 이미지 주소를 넣어주세요. main 색상보다 우선적입니다.*/
+        --nav-img: url('');
+        /* 메뉴 네비게이션 영역에 배경이미지를 넣습니다. 따옴표 안에 이미지 주소를 넣어주세요. 패턴과 sub 색상보다 우선적으로 깔리게 됩니다.*/
+        --nav-pattern: url('');
+        /* 메뉴 네비게이션 영역에 패턴 배경을 넣습니다. 따옴표 안에 이미지 주소를 넣어주세요. sub 색상보다 우선적입니다.*/
+        --limit-img: url('../bg-img.png');
+        /* 크기제한 스타일을 사용하는 경우, 가장 바깥 영역의 전체 배경이미지를 넣습니다. 따옴표 안에 이미지 주소를 넣어주세요. 패턴과 main 색상보다 우선적으로 깔리게 됩니다.*/
+        --limit-pattern: url('');
+        /* 크기제한 스타일을 사용하는 경우, 가장 바깥 영역의 전체 배경이미지를 넣습니다. 따옴표 안에 이미지 주소를 넣어주세요. 패턴과 main 색상보다 우선적으로 깔리게 됩니다.*/
+
+
+    /* -------- -------- -------- -------- 글꼴 설정 -------- -------- -------- -------- */
+        --font: 'Pretendard-Regular', sans-serif;
+        /* 맨 위에서 호출한 웹폰트의 font-family 값을 사용해야 정상 적용됩니다. */
+        --default-font-size: 11pt;
+        --text-color: #000;
+        /* 홈페이지에서 기본적으로 사용할 폰트 크기 및 글꼴 색상을 지정합니다. */
+
+
+    /* -------- -------- -------- -------- 버튼 설정 -------- -------- -------- -------- */
+        --button-round: 15px;
+        /* 버튼들의 기본적인 테두리 둥글기 값을 지정합니다 */
+        --button-min-width: 80px;
+        /* 버튼의 최소 너비를 결정합니다. */
+
+
+    /* -------- -------- -------- -------- BGM 설정 -------- -------- -------- -------- */
+        --bgm-play-img: url('../bgm-play.gif');
+        --bgm-stop-img: url('../bgm-stop.gif');
+        /* 배경 재생 상태 이미지를 각각 지정합니다. */
+        --bgm-img-width: 32px;
+        --bgm-img-height: 32px;
+        /* 배경 재생 상태 이미지의 크기를 지정합니다. */
+
+
+    /* -------- -------- -------- -------- 마우스 커서 설정 (PC 전용) -------- -------- -------- -------- */
+        --default-cursor: url('');
+        /* 기본 마우스 커서로 사용할 이미지 주소를 넣습니다. */
+        --over-cursor: url('');
+        /* 버튼 위에 마우스를 올렸을 때 사용할 이미지 주소를 넣습니다. */
+
+
+    /* -------- -------- -------- -------- 기타 설정 -------- -------- -------- -------- */
+        --clear: transparent;
+        /* 투명값입니다. 컬러를 넣을 곳에 var(--clear)로 호출하여 사용합니다. */
+        --border: 1px solid var(--point-color);
+        /* 원하는 요소에 border: var(--border)로 작성하여 사용합니다. */
+        --shadow: 0px 2px 10px -5px var(--shadow-color);
+        /* 그림자 꾸밈요소의 기본 속성을 지정합니다. 원하는 요소에 box-shadow: var(--shadow)로 작성하여 사용합니다.*/
+
+
+    /* -------- -------- -------- -------- 네비게이션 메뉴 설정 -------- -------- -------- -------- */
+        --nav-width: 200px;
+        /* 왼쪽 및 오른쪽 네비게이션을 사용할 때 너비를 지정합니다. */
+        --nav-height: 60px;
+        /* 상단 네비게이션을 사용할 때 높이를 지정합니다. */
+        --nav-item-gap: 5px;
+        /* 메뉴 버튼 사이의 간격 크기를 조절합니다. */
+
+
+    /* -------- -------- -------- -------- 여백 설정 -------- -------- -------- -------- */
+        --box-padding: 20px;
+        /* 영역 상자 내부의 상하좌우 여백크기를 지정합니다. */
+        --box-gap: 20px;
+        /* 영역 상자간의 간격을 지정합니다. */
+        --limit-width: 80%;
+        /* 크기제한 스타일을 사용하는 경우, 제한할 너비크기를 지정합니다. */
+        --limit-height: 80%;
+        /* 크기제한 스타일을 사용하는 경우, 제한할 높이를 지정합니다. */
+        --limit-round: 15px;
+        /* 크기제한 스타일을 사용하는 경우, 테두리 둥글기 값을 지정합니다. */
+
+
+    /* -------- -------- -------- -------- 모듈 박스 설정 -------- -------- -------- -------- */
+        --pc-module-width: 70%;
+        /* PC버전의 모듈박스 너비크기를 지정합니다. */
+        --mobile-module-width: 100%;
+        /* 모바일 버전의 모듈박스 너비크기를 지정합니다. 기본값 100% 추천 */
+        --module-opacity: 100%;
+        /* 모듈박스의 투명도를 지정합니다. 0에서 100까지의 값을 %로 입력합니다. 단, 내용도 투명해집니다. (반투명 권장 : 98~99%) */
+        --module-round: 15px;
+        /* 모듈박스의 기본적인 테두리 둥글기 값을 지정합니다. */
+
+        /* -------- -------- -------- 모듈 개별 설정 -------- -------- -------- */
+            --visual-module-width: auto;
+            /* 비쥬얼 모듈만 너비를 제한하려면 auto를 다른 값으로 변경합니다. */
+            --pair-module-width: auto;
+            /* 페어 모듈만 너비를 제한하려면 auto를 다른 값으로 변경합니다. */
+            --pair-bg-gradient: linear-gradient(0deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
+            /* 페어 모듈의 배경 그라데이션 농도를 조절합니다. */
+            --text-module-width: auto;
+            /* 텍스트 모듈만 너비를 제한하려면 auto를 다른 값으로 변경합니다. */
+            --diary-module-width: auto;
+            /* 다이어리 모듈만 너비를 제한하려면 auto를 다른 값으로 변경합니다. */
+            --diary-ratio: 50% 50%;
+            /* (PC모드용) 다이어리 모듈의 이미지:텍스트 가로비율을 설정합니다. 도합 100%가 되게 해주세요. */
+            --embed-height: 300px;
+            /* 임베드 모듈에서 불러온 요소의 기본 높이를 지정합니다. */
+            --embed-min-height: 0;
+            /* 임베드 모듈에서 불러온 요소의 최소 높이를 제한합니다. 제한을 하지 않으려면 0으로 입력합니다.*/
+            --embed-max-height: none;
+            /* 임베드 모듈에서 불러온 요소의 최대 높이를 제한합니다. 제한을 하지 않으려면 none으로 입력합니다.*/
+
+
+    /* -------- -------- -------- -------- 배너 설정 -------- -------- -------- -------- */
+        --banner-gap: 5px;
+        /* 배너의 상하 간격을 조정합니다. */
+        --banner-align: center;
+        /* links 페이지의 배너 정렬을 지정합니다. center: 가운데, left: 왼쪽, right: 오른쪽 */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::selection {
+    background-color: var( --select);
+    color: var( --select-color);
+}
+
+body {
+    display: flex;
+    background:
+    center / contain no-repeat var(--bg-img),
+    left top / auto repeat var(--main-color) var(--bg-pattern);
+}
+
+/* -----사용자 선택 뷰 스타일 : PC에서 꽉차게 (2중 택 1) */
+/* ------------------------------------------------- */
+
+/* -----사용자 선택 뷰 스타일 : PC에서 가운데에 작게, 크기제한 스타일 (2중 택 1) */
+html {
+    background:
+    center / cover no-repeat var(--limit-img),
+    left top / auto repeat var(--main-color) var(--limit-pattern);
+}
+
+body {
+    width: var(--limit-width);
+    height: var(--limit-height);
+    margin: calc((100% - var(--limit-height)) / 5) auto 0;
+    border-radius: var(--limit-round);
+}
+/* ------------------------------------------------- */
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-color1) var(--scroll-color2);
+}
+
+* {
+    font-size: var(--default-font-size);
+    font-family: var(--font);
+    color: var(--text-color);
+    box-sizing: border-box;
+    word-break: keep-all;
+    cursor: var(--default-cursor), default !important;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+img.small-img {
+    width: auto;
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {font-weight: bold;}
+h1 {font-size: xx-large;}
+h2 {font-size: x-large;}
+h3 {font-size: large;}
+h4 {font-size: medium;}
+h5 {font-size: x-small;}
+h6 {font-size: xx-small; font-style: italic;}
+
+a {
+    margin: 0;
+    padding: 0;
+    background-color: var(--clear);
+    color: var(--point-color);
+    min-width: 0;
+}
+a:hover {
+    color: var(--point-sub-color);
+    text-decoration: underline;
+}
+
+button, a.button {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--point-color);
+    color: var(--main-color);
+    border-radius: var(--button-round);
+    margin: 0;
+    padding: 10px 20px;
+    min-width: var(--button-min-width);
+}
+
+button:hover, a.button:hover {
+    background-color: var(--point-sub-color);
+}
+
+button:hover, a:hover {
+    cursor: var(--over-cursor), pointer !important;
+}
+
+#bgmBtn {
+    position: absolute;
+    display: flex;
+    bottom: var(--box-gap);
+}
+
+#bgmBtn button {
+    padding: 0;
+    color: var(--disable-color);
+    background-color: var(--clear);
+    min-width: 0;
+}
+
+#bgmVisual {
+    width: var(--bgm-img-width);
+    height: var(--bgm-img-height);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-image: var(--bgm-play-img);
+}
+
+#bgmBtn #bgmStatus[value="stop"] ~ #bgmVisual {
+    background-image: var(--bgm-stop-img);
+}
+
+#bgmBtn #bgmStatus[value="play"] ~ .play {
+    color: var(--good-color);
+}
+
+#bgmBtn #bgmStatus[value="stop"] ~ .stop {
+    color: var(--bad-color);
+}
+
+#bgm {
+    display: none;
+}
+
+nav {
+    background:
+    center / contain no-repeat var(--nav-img),
+    left top / auto repeat var(--sub-color) var(--nav-pattern);
+    position: relative;
+    width: var(--nav-width);
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--box-padding);
+}
+
+nav a.button, nav button {
+    margin: var(--nav-item-gap);
+}
+
+/* -----사용자 선택 네비게이션 위치 : PC에서 왼쪽 고정 (3중 택 1) */
+
+/* ------------------------------------------------- */
+
+/* -----사용자 선택 네비게이션 위치 : PC에서 오른쪽 고정 (3중 택 1) */
+body {
+    flex-direction: row-reverse;
+}
+/* ------------------------------------------------- */
+
+/* -----사용자 선택 네비게이션 위치 : 기본 상단 고정 (3중 택 1) */
+body {
+    flex-direction: column;
+}
+
+#bgmBtn {
+    bottom: auto;
+    right: var(--box-gap);
+}
+
+nav {
+    width: 100%;
+    height: var(--nav-height);
+    flex-direction: row;
+}
+
+nav #profile {
+    display: none;
+}
+/* ------------------------------------------------- */
+
+.section-title {
+    max-width: var(--pc-module-width);
+    margin: var(--box-gap) auto;
+}
+
+.module {
+    max-width: var(--pc-module-width);
+    background-color: var(--main-color);
+    box-shadow: var(--shadow);
+    padding: var(--box-padding);
+    margin: var(--box-gap) auto 0;
+    border-radius: var(--module-round);
+    opacity: var(--module-opacity);
+    overflow: hidden;
+}
+
+.module > *:first-child,
+.diary-text > *:first-child {
+    margin-top: 0;
+}
+.module > *:last-child,
+.diary-text > *:last-child {
+    margin-bottom: 0;
+}
+
+.visual-module {
+    padding: 0;
+}
+
+.pair-module {
+    width: var(--pair-module-width);
+    position: relative;
+    display: grid;
+    gap: var(--box-gap);
+    grid-row-gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pair-module .pair-title {
+    position: absolute;
+    text-align: center;
+    left: calc((50% - var(--box-gap)*2));
+    z-index: 3;
+}
+
+.pair-module .pair-info {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.pair-module .pair-bg-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--pair-bg-gradient);
+    z-index: 1;
+}
+
+.pair-module .pair-img img {
+    width: auto;
+    margin: 0 auto;
+}
+
+.pair-module .pair-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.pair-module .pair-text > *:last-child {
+    margin-bottom: 0;
+}
+
+.text-module {
+    width: var(--text-module-width);
+}
+
+.diary-module {
+    padding: 0;
+    display: grid;
+    grid-template-columns: var(--diary-ratio);
+    position: relative;
+}
+
+.diary-module .date {
+    position: absolute;
+    right: var(--box-padding);
+    top: var(--box-padding);
+    color: var(--point-sub-color);
+}
+
+.diary-module .diary-text {
+    padding: var(--box-padding);
+}
+
+.embed-module iframe,
+.embed-module embed,
+.embed-module object {
+    width: 100%;
+    height: var(--embed-height);
+    min-height: var(--embed-min-height);
+    max-height: var(--embed-max-height);
+}
+
+.embed-module.full {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    box-shadow: none;
+}
+
+.embed-module.full iframe,
+.embed-module.full embed,
+.embed-module.full object {
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+}
+
+.banner-module {
+    background-color: var(--clear);
+    text-align: var(--banner-align);
+    box-shadow: var(--clear);
+}
+
+.banner-module.self {
+    background-color: var(--main-color);
+    box-shadow: var(--shadow);
+}
+
+#footer {
+    color: var(--disable-color);
+    margin: var(--box-gap);
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        width: 100%;
+        height: 100%; 
+        margin: 0;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    #bgmBtn {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        height: 50px;
+        flex-direction: row;
+    }
+    
+    nav #profile {
+        display: none;
+    }
+
+    .diary-module {
+        grid-template-columns: auto;
+    }
+   
+    .pair-module .pair-img img {
+        width: 100%;
+    }
+}   
+
+@media screen and (max-width: 991px) {
+    .section-title {
+        max-width: var(--mobile-module-width);
+        margin: var(--box-gap);
+    }
+
+	.module {
+        max-width: var(--mobile-module-width);
+        margin: var(--box-gap);
+    }
+}

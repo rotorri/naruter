@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+#footer {
+    color: var(--disable-color);
+    margin-top: var(--box-gap);
+    text-align: center;
+}

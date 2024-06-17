@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="./skin/css/style.css">
+<script src="./skin/js/script.js"></script>
+<nav>
+    <div id="profile">
+        <img src="./skin/profile.png">
+        <h3>나루터</h3>
+        <h5>:: Naruter ::</h5>
+        <p>나루 입문을 위한 홈페이지 템플릿</p>
+    </div>
+    <a href="./pages/home.html" target="frame" class="button">Home</a>
+    <a href="./pages/board.html" target="frame" class="button">Board</a>
+    <a href="./pages/embed.html" target="frame" class="button">Embed</a>
+    <a href="./pages/links.html" target="frame" class="button">Links</a>
+    <div id="bgmBtn">
+        <input type="hidden" id="bgmStatus" value="">
+        <div id="bgmVisual"></div>
+        <button class="play" onclick="bgm('play');">&#9654;</button>
+        <button class="stop" onclick="bgm('stop');">&#9632;</button>
+        <div id="bgm"></div>
+        <script>window.addEventListener('load', bgm('play'));</script>
+    </div>
+</nav>
+<iframe src="./pages/home.html" name="frame" frameborder="0" style="width: 100%; height: 100%;"></iframe>
