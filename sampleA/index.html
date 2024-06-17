@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Naruter SampleA</title>
+    <link rel="icon" type="image/png" href="./skin/favicon.png"/>
+    <link rel="stylesheet" href="./skin/css/style.css">
+    <link rel="stylesheet" href="./skin/css/home.css">
+    <link rel="stylesheet" href="./skin/css/board.css">
+    <link rel="stylesheet" href="./skin/css/links.css">
+    <link rel="stylesheet" href="./skin/css/custom.css">
+    <script src="./skin/js/script.js"></script>
+</head>
+<body>
+    <nav>
+        <div id="profile">
+            <img src="./skin/profile.png">
+            <h3>나루터</h3>
+            <h5>:: Naruter ::</h5>
+            <p>나루 입문을 위한 홈페이지 템플릿</p>
+        </div>
+        <a href="#home" class="button">Home</a>
+        <a href="#board" class="button">Board</a>
+        <a href="#embed" class="button">Embed</a>
+        <a href="#links" class="button">Links</a>
+        <div id="bgmBtn">
+            <input type="hidden" id="bgmStatus" value="">
+            <div id="bgmVisual"></div>
+            <button class="play" onclick="bgm('play');">&#9654;</button>
+            <button class="stop" onclick="bgm('stop');">&#9632;</button>
+            <div id="bgm"></div>
+            <script>window.addEventListener('load', bgm('play'));</script>
+        </div>
+    </nav>
+    <div id="wrap">
+        <div id="home">
+            <div class="section-title">
+                <h1>Home</h1>
+            </div>
+            <div class="text-module module">
+                <img src="./data/main.png" class="small-img">
+                <h3>나루터?</h3>
+                <p>호스팅 세팅이 필요없는 갠홈 솔루션 나루(<a href="https://naru.pub" target="_blank" class="inline">naru.pub</a>)에 바로 업로드하여 사용할 수 있는 <b>비설치형 홈페이지 템플릿</b>입니다. 현재 나루에서는 DB 기능을 사용할 수 없어 게시글 관리 기능은 개발되지 않았습니다.</p>
+                <p>현재 보고 계신 페이지는 나루터의 첫 페이지가 되는 곳입니다. 이곳에 페이지 소개를 작성하거나 이미지를 추가해보세요.</p>
+                <p>원하는 만큼 html 파일에서 모듈 박스를 추가하고 내용을 자유롭게 작성하세요.</p>
+                <p>활용할 수 있는 모듈의 종류는 Board 페이지를 확인하세요.</p>
+                <p>본 템플릿은 크로미움 기반 브라우저를 기준으로 제작 되었습니다.</p>
+                <h5>개발 및 문의 : 로토리 Rotorri</h5>
+                <a href="mailto:rotorri.com@gmail.com" class="button">Mail</a>
+                <a href="https://github.com/rotorri" target="_blank" class="button">Github</a>
+            </div>
+        </div>
+
+        <div id="board">
+            <div class="section-title">
+                <h1>Board</h1>
+            </div>
+            <div class="text-module module">
+                <h2>텍스트 모듈</h2>
+                <h5>div.text-module.module</h5>
+                <p>텍스트를 입력할 때 사용하는 모듈입니다.</p>
+                <p>모듈을 조합하고, 제목용인 h1 ~ h6 태그와 p 태그를 활용해 글을 작성해보세요.</p>
+                <h1>h1 태그</h1> <h2>h2 태그</h2> <h3>h3 태그</h3> <h4>h4 태그</h4> <h5>h5 태그</h5> <h6>h6 태그</h6>
+                <p>아래의 큰 이미지만 넣는 모듈은 비쥬얼 모듈이라고 부릅니다.</p>
+            </div>
+            <div class="visual-module module">
+                <img src="./data/visual1.png">
+            </div>
+            <div class="pair-module module">
+                <div class="pair-title">
+                    <h3>페어명 입력</h3>
+                    <h5>since 1970.01.01</h5>
+                </div>
+                <div class="pair-left pair-info">
+                    <div class="pair-img">
+                        <img src="./data/pair1-1.png">
+                    </div>
+                    <div class="pair-text">
+                        <h3>캐릭터A</h3>
+                        <p>이 친구에 대해서 주절거려봅시다.</p>
+                    </div>
+                </div>
+                <div class="pair-right pair-info">
+                    <div class="pair-img">
+                        <img src="./data/pair1-2.png">
+                    </div>
+                    <div class="pair-text">
+                        <h3>캐릭터B</h3>
+                        <p>이 친구에 대해서 주절거려봅시다.</p>
+                    </div>
+                </div>
+                <div class="pair-bg-screen"></div>
+                <div class="pair-bg">
+                    <img src="./data/pair1-bg.png">
+                </div>
+            </div>
+            <div class="diary-module module">
+                <div class="diary-img">
+                    <img src="./data/diary1.png">
+                </div>
+                <div class="diary-text">
+                    <h2>다이어리 모듈</h2>
+                    <h5>div.diary-module.module</h5>
+                    <p>이미지 1장과 텍스트를 입력할 때 사용하는 모듈입니다.</p>
+                    <p>날짜 입력란을 갖고 있으며 날짜는 모듈 오른쪽 상단에 나타납니다.</p>
+                    <span class="date">24.12.25</span>
+                </div>
+            </div>
+            <div class="embed-module module">
+                <h1>임베드 모듈</h1>
+                <h5>div.embed-module.module / div.embed-module.<strong>full</strong>.module</h5>
+                <p>embed 태그를 통해 외부 사이트 콘텐츠를 가져올 때 사용하는 모듈입니다.</p>
+                <p>다른 모듈과 동일한 여백값을 갖지 않고 Embed 페이지처럼 화면을 꽉차게 사용하려면 full 클래스를 추가합니다.</p>
+                <p>샘플은 각각 오이카페(<a href="https://oeee.cafe" target="_blank" class="inline">oeee.cafe</a>)와 타이포블루(<a href="https://typo.blue" target="_blank" class="inline">typo.blue</a>)의 대표 콘텐츠입니다.</p>
+                <iframe src="https://oeee.cafe/communities/7kxSHE6qToSTnTguuE40EQ/embed" frameborder="0"></iframe>
+                <iframe src="https://typo.blue/@blue/embed" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="embed" id="embed">
+            <div class="section-title">
+                <h1>Embed</h1>
+            </div>
+            <div class="embed-module full module">
+                <iframe src="https://oeee.cafe/communities/7kxSHE6qToSTnTguuE40EQ/embed" frameborder="0"></iframe>
+            </div>
+        </div>        
+
+        <div id="links">
+            <div class="section-title">
+                <h1>Links</h1>
+            </div>
+            <div class="text-module module">
+                <p>배너를 위한 모듈은 총 3가지로 준비하였습니다.</p>
+                <p>모든 배너 이미지는 직접 업로드하셔야하고 배너주소 또한 직접 작성해주셔야합니다.</p>
+                <h3>개인 배너 모듈</h3>
+                <h5>div.banner-module.self.module</h5>
+                <p>자신의 배너 정보를 등록하는 영역입니다. 주소 복사 기능이 제공됩니다.</p>
+                <h3>배너 그룹 모듈</h3>
+                <h5>div.banner-module.group.module</h5>
+                <p>배너들을 일정한 그룹으로 묶을 때 사용하는 모듈입니다. 제목이 제공됩니다.</p>
+                <h3>일반 배너 모듈</h3>
+                <h5>div.banner-module.module</h5>
+                <p>기본적으로 배너들을 나열해 두는 영역입니다.</p>
+                <p>갠홈용 배너 사이즈는 가로 200 x 세로40 px .. 가 전통적으로 이어지고 있는 듯합니다.</p>
+            </div>
+        
+            <div class="banner-module self module">
+                <div class="banner-img"><img src="./data/banner1.png" id="myBanner" alt="배너1"></div>
+                <div class="banner-text">
+                    <p>자유롭게 복사해보세요.</p>
+                    <button class="copy" onclick="copy('img');">배너 이미지 주소만 복사</button>
+                    <button class="copy" onclick="copy('url');">현재 사이트 주소만 복사</button>
+                    <button class="copy" onclick="copy('tag');">배너 태그 전체 복사</button>
+                </div>
+            </div>
+        
+            <div class="banner-module group module">
+                <h3 class="banner-title">배너 그룹 이름</h3>
+                <a href="#"><img src="./data/banner2.png" alt="배너2"></a>
+                <a href="#"><img src="./data/banner1.png" alt="배너1"></a>
+            </div>
+        
+            <div class="banner-module module">
+                <a href="#"><img src="./data/banner1.png" alt="배너1"></a>
+                <a href="#"><img src="./data/banner2.png" alt="배너2"></a>
+                <a href="#"><img src="./data/banner3.png" alt="배너3"></a>
+            </div>
+        </div>
+        <div id="footer">
+            Naruter copyright ⓒ since by 2024 Rotorri<br>
+            <img class="small-img" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnaruter.naru.pub&count_bg=%23639BFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Naruter&edge_flat=false"/>
+        </div>
+    </div>
+</body>
+</html>
