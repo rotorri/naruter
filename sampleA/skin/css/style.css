@@ -2,29 +2,33 @@
 
 /* 웹폰트는 이 위치에 넣어서 불러옵니다. */
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-family: 'Sam3KRFont';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Sam3KRFont.woff') format('woff');
 }
 /* 웹폰트는 이 위치에 넣어서 불러옵니다. */
 
 :root {
     /* -------- -------- -------- -------- 전체 색상 설정 -------- -------- -------- -------- */
-        --main-color: #fff;
-        --sub-color: #c3eeff;
+        --main-color: #008080;
+        --sub-color: #c3c3c3;
         /* 전반적인 색상을 지정합니다. */
-        --point-color: #639bff;
-        --point-sub-color: #3838ff;
+        --point-color: #3838ff;
+        --point-sub-color: #010081;
         /* 주요 포인트 색상을 지정합니다. */
-        --good-color: #47c88b;
+        --good-color: #31ff31;
         /* 긍정 강조 색상을 지정합니다. */
-        --bad-color: #ff6351;
+        --bad-color: #ff2727;
         /* 부정 강조 색상을 지정합니다. */
         --disable-color: #bbb;
         /* 비활성 강조 색상을 지정합니다. */
-        --shadow-color: rgba(0,0,0,.5);
+        --shadow-color: rgba(0,0,0,1);
         /* 그림자 기본 색상을 지정합니다. 그림자를 사용하지 않으려면 값을 rgba(0,0,0,0)으로 변경하세요. */
-        --scroll-color1: #ffed89;
-        --scroll-color2: #c3eeff;
+        --btn-text-color: #fff;
+        /* 버튼 텍스트 색상을 지정합니다. */
+        --module-bg-color: #fff;
+        /* 모듈 배경 색상을 지정합니다. */
+        --scroll-color1: #c3c3c3;
+        --scroll-color2: #dfdfdf;
         /* 스크롤바의 커스텀 색상을 지정합니다. */
         --select: #ffed89;
         --select-color: #000080;
@@ -47,23 +51,23 @@
 
 
     /* -------- -------- -------- -------- 글꼴 설정 -------- -------- -------- -------- */
-        --font: 'Pretendard-Regular', sans-serif;
+        --font: 'Sam3KRFont', sans-serif;
         /* 맨 위에서 호출한 웹폰트의 font-family 값을 사용해야 정상 적용됩니다. */
-        --default-font-size: 11pt;
+        --default-font-size: 13pt;
         --text-color: #000;
         /* 홈페이지에서 기본적으로 사용할 폰트 크기 및 글꼴 색상을 지정합니다. */
 
 
     /* -------- -------- -------- -------- 버튼 설정 -------- -------- -------- -------- */
-        --button-round: 15px;
+        --button-round: 0;
         /* 버튼들의 기본적인 테두리 둥글기 값을 지정합니다 */
         --button-min-width: 80px;
         /* 버튼의 최소 너비를 결정합니다. */
 
 
     /* -------- -------- -------- -------- BGM 설정 -------- -------- -------- -------- */
-        --bgm-play-img: url('../bgm-play.gif');
-        --bgm-stop-img: url('../bgm-stop.gif');
+        --bgm-play-img: url('../bgm-play.png');
+        --bgm-stop-img: url('../bgm-stop.png');
         /* 배경 재생 상태 이미지를 각각 지정합니다. */
         --bgm-img-width: 32px;
         --bgm-img-height: 32px;
@@ -80,14 +84,14 @@
     /* -------- -------- -------- -------- 기타 설정 -------- -------- -------- -------- */
         --clear: transparent;
         /* 투명값입니다. 컬러를 넣을 곳에 var(--clear)로 호출하여 사용합니다. */
-        --border: 1px solid var(--point-color);
+        --border: 5px solid var(--sub-color);
         /* 원하는 요소에 border: var(--border)로 작성하여 사용합니다. */
-        --shadow: 0px 2px 10px -5px var(--shadow-color);
+        --shadow: 4px 4px 0px 1px var(--shadow-color);
         /* 그림자 꾸밈요소의 기본 속성을 지정합니다. 원하는 요소에 box-shadow: var(--shadow)로 작성하여 사용합니다.*/
 
 
     /* -------- -------- -------- -------- 네비게이션 메뉴 설정 -------- -------- -------- -------- */
-        --nav-width: 200px;
+        --nav-width: 250px;
         /* 왼쪽 및 오른쪽 네비게이션을 사용할 때 너비를 지정합니다. */
         --nav-height: 60px;
         /* 상단 네비게이션을 사용할 때 높이를 지정합니다. */
@@ -115,7 +119,7 @@
         /* 모바일 버전의 모듈박스 너비크기를 지정합니다. 기본값 100% 추천 */
         --module-opacity: 100%;
         /* 모듈박스의 투명도를 지정합니다. 0에서 100까지의 값을 %로 입력합니다. 단, 내용도 투명해집니다. (반투명 권장 : 98~99%) */
-        --module-round: 15px;
+        --module-round: 0px;
         /* 모듈박스의 기본적인 테두리 둥글기 값을 지정합니다. */
 
         /* -------- -------- -------- 모듈 개별 설정 -------- -------- -------- */
@@ -229,7 +233,7 @@ button, a.button {
     text-decoration: none;
     font-weight: bold;
     background-color: var(--point-color);
-    color: var(--main-color);
+    color: var(--btn-text-color);
     border-radius: var(--button-round);
     margin: 0;
     padding: 10px 20px;
@@ -311,13 +315,14 @@ nav a.button, nav button {
 
 .module {
     max-width: var(--pc-module-width);
-    background-color: var(--main-color);
+    background-color: var(--module-bg-color);
     box-shadow: var(--shadow);
     padding: var(--box-padding);
     margin: var(--box-gap) auto 0;
     border-radius: var(--module-round);
     opacity: var(--module-opacity);
     overflow: hidden;
+    border: var(--border);
 }
 
 .module > *:first-child,
@@ -430,10 +435,12 @@ nav a.button, nav button {
     background-color: var(--clear);
     text-align: var(--banner-align);
     box-shadow: var(--clear);
+    border: none;
 }
 
 .banner-module.self {
-    background-color: var(--main-color);
+    background-color: var(--module-bg-color);
+    border: var(--border);
     box-shadow: var(--shadow);
 }
 
