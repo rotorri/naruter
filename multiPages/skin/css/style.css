@@ -23,6 +23,10 @@
         /* 비활성 강조 색상을 지정합니다. */
         --shadow-color: rgba(0,0,0,.5);
         /* 그림자 기본 색상을 지정합니다. 그림자를 사용하지 않으려면 값을 rgba(0,0,0,0)으로 변경하세요. */
+        --btn-text-color: #fff;
+        /* 버튼 텍스트 색상을 지정합니다. */
+        --module-bg-color: #fff;
+        /* 모듈 배경 색상을 지정합니다. */
         --scroll-color1: #ffed89;
         --scroll-color2: #c3eeff;
         /* 스크롤바의 커스텀 색상을 지정합니다. */
@@ -253,7 +257,7 @@ button, a.button {
     text-decoration: none;
     font-weight: bold;
     background-color: var(--point-color);
-    color: var(--main-color);
+    color: var(--btn-text-color);
     border-radius: var(--button-round);
     margin: 0;
     padding: 10px 20px;
@@ -364,7 +368,7 @@ nav #profile {
 
 .module {
     max-width: var(--pc-module-width);
-    background-color: var(--main-color);
+    background-color: var(--module-bg-color);
     box-shadow: var(--shadow);
     padding: var(--box-padding);
     margin: var(--box-gap) auto;
@@ -483,6 +487,7 @@ nav #profile {
     background-color: var(--clear);
     text-align: var(--banner-align);
     box-shadow: var(--clear);
+    border: none;
 }
 
 .banner-module.self {
