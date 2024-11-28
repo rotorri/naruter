@@ -313,6 +313,13 @@ nav {
     justify-content: center;
     align-items: center;
     padding: var(--box-padding);
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+nav::-webkit-scrollbar,
+nav::-webkit-scrollbar-button {
+    display:none;
 }
 
 nav a.button, nav button {
@@ -507,6 +514,7 @@ nav #profile {
         width: 100%;
         height: 50px;
         flex-direction: row;
+        justify-content: flex-start;
     }
     
     nav #profile {
